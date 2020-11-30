@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <!-- Scripts-->	
+        <script src="../js/jQuery_v3.4.1.js"></script>	
+        <script src="../js/rennovatelook.js"></script>	
+        <title>Rennovate Look | Login</title>
+        <link href="img/rennovatelook.ico" rel="icon"/>
+
+        <meta charset="utf-8" />
+
+        <!-- Estilos -->
+        <link rel="stylesheet" type="text/css" href="../css/rennovatelook.css" />
+        <link rel="stylesheet" type="text/css" href="../css/rennovatelook-form.css" />
+        <link rel="stylesheet" href="../css/sweetalert2.min.css" />
+
+        <!-- Scripts-->	
+        <script src="../js/sweetalert2.min.js"></script>
+        
+        <style type="text/css">
+           .ui-growl {
+               top:150px;
+           }
+       </style>
+    </h:head>
+
+    <h:body>	      
+        
+        <header id="header">
+            <nav class="menu">			
+                <div class="logo-box">
+                    <img src="../img/logolargo.jpg" alt="" /> 
+                    <span class="btn-menu"><i class="fas fa-bars" aria-hidden="true" /></span>
+                </div>
+            </nav>
+            <!--Img Header -->		
+            <div class="img-header">
+
+                <br /><br /><br /><br />
+
+                
+
+                <div class="contenedor-form">
+
+                    <div class="toggle">
+                        <span>Crear cuenta</span>
+                    </div>
+
+                    <div class="formulario">
+                        
+                        
+                        <img src="../img/Logo2.jpg" alt="" />					
+                        <h2>Iniciar sesión</h2>
+                        <h:form id="formLogin">                            
+                            <p:growl id="growlFormLogin" showDetail="true" sticky="true" />
+                            <p:inputText id="username" value="#{LoginControlador.idEmpleado}"  required="true"></p:inputText>
+                            <p:password id="password" value="#{LoginControlador.claveEmpleado}" required="true" feedback="false"></p:password>
+                            <p:commandButton action="#{LoginControlador.validarEmpleado()}" value="Ingresar" update="formLogin" ajax="true"></p:commandButton>                            
+                        </h:form>
+                    </div>
+
+                    <div class="formulario">
+                        <h2>Crea tu cuenta</h2>
+                     
+                            <h:form id="formRegistrarEmpleado">             
+                                <p:growl id="growlFormRegistrarEmpleado" showDetail="true" sticky="true" />
+                                <p:inputText id="txtIdUsuario" value="#{LoginControlador.idEmpleado}" required="true" ></p:inputText>
+                                <p:password id="txtClaveUsuario" value="#{LoginControlador.claveEmpleado}"  feedback="false"></p:password>
+                                <p:inputText id="txtEmailUsuario" value="#{LoginControlador.emailEmpleado}" ></p:inputText>
+                                <p:inputText id="txtTelefonoUsuario" value="#{LoginControlador.telefonoEmpleado}" ></p:inputText>
+
+                                <p:commandButton action="#{LoginControlador.crearEmpleado()}" value="Registrar" update="formRegistrarEmpleado" ajax="true"></p:commandButton>
+                            </h:form>
+     
+                    </div>
+
+                    <div class="reset-password">
+                        <a href="#">Olvide mi contraseña?</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script src="../js/main.js"></script>	
+        <script src="../js/validar.js"></script>
+
+    </h:body>
+</html>

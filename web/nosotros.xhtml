@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+	<meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+	<title>Rennovate Look | Nosotros</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&amp;display=swap" />
+	<link rel="stylesheet" href="../css/nosotros.css"/>
+</h:head>
+    
+<h:body>
+	<!--Menu de navegacion-->
+	<header id="header">
+		<nav class="menu">
+                    <div class="logo-box">
+                            <img src="../img/logolargo.jpg" alt=""/>
+                            <!--<h1><a href="#">Rennovate Look</a></h1>-->
+                            <span class="btn-menu"><i class="fas fa-bars"></i></span>
+                    </div>
+                    <h:form>
+                        <div class="list-container">
+                            <ul class="list">
+                                <li>
+                                    <h:link outcome="index">Inicio</h:link>
+                                </li>
+                                <li>
+                                    <h:link outcome="servicios">Servicios</h:link>
+                                </li>
+                                <li>
+                                    <h:link outcome="productos">Productos</h:link>
+                                </li>
+                                <li>
+                                    <h:link outcome="nosotros">Nosotros</h:link>
+                                </li>
+                                <li>
+                                    <h:link outcome="login">Iniciar Sesion</h:link>
+                                </li>  
+                            </ul>
+                        </div>
+                    </h:form>
+		</nav>
+	</header>
+
+	<section class="acerca-de">
+		<div class="info-container">
+			<h1>Acerca de Nosotros</h1>
+			<p>En la peluquería Luz Innovación nos dedicamos a brindar servicios para el cuidado personal tanto de hombres, niños y mujeres, con mas de cinco años de experiencia en tratamientos, asesorias, mantenimientos y cambios de imagen.</p>
+
+			<div class="about-gallery">
+				<img src="../img/color.jpg" alt=""/>
+				<img src="../img/color.jpg" alt=""/>
+				<img src="../img/color.jpg" alt=""/>
+			</div>
+		</div>
+
+	</section>
+	<br/>
+	<h1>Ubicacion</h1>
+	<br/>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.39280669246!2d-74.24789632811694!3d4.648625943221135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses-419!2sco!4v1591399391333!5m2!1ses-419!2sco" width="1350" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+	<br/>
+
+	<footer class="footer">
+	<div class="deg-footer"></div>
+	<div class="ejeZfooter">
+		<div class="footer-content">
+			<div class="footer-title">
+				<h2>Formulario de contacto</h2>
+				<hr/>
+			</div>
+
+
+			<div class="formulario-content">
+				<h:form id="formulario">
+					<label for="user">Nombre:</label>
+					<input type="text" id="user" name="user" placeholder="Ingresa tu nombre"/>
+
+					<label for="email">Correo Electronico:</label>
+					<input type="email" id="email" name="email" placeholder="Ingresa tu correo electronico"/>
+
+					<label for="mensaje">Escribe tu mensaje:</label>
+					<textarea name="mensaje" id="mensaje"></textarea>
+
+					<div class="send"><button>Enviar</button></div>
+
+					<div class="mensaje-form">
+						<p class="text-right">Right aligned text on all viewport sizes.</p>
+					</div>
+				</h:form>
+			</div>
+
+			<div class="footer-text">
+				<p>&copy; Rennovate Look - 2020 | Todos los derechos reservados</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+    <!--Scripts-->
+    <script src="https://kit.fontawesome.com/2e80612393.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</h:body>
+
+</html>

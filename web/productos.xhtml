@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+	<meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+	<title>Rennovate Look | Productos</title>
+	<link rel="stylesheet" href="../css/productos.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&amp;display=swap" />
+</h:head>
+<h:body>
+	<!--Menu de navegacion-->
+	<header id="header">
+		<nav class="menu">
+			<div class="logo-box">
+				<img src="../img/logolargo.jpg" alt=""/>
+				<!--<h1><a href="#">Rennovate Look</a></h1>-->
+				<span class="btn-menu"><i class="fas fa-bars"></i></span>
+			</div>
+                    <h:form>
+			<div class="list-container">
+				<ul class="list">
+                                    <li>
+                                        <h:link outcome="index">Inicio</h:link>
+                                    </li>
+                                    <li>
+                                        <h:link outcome="servicios">Servicios</h:link>
+                                    </li>
+                                    <li>
+                                        <h:link outcome="productos">Productos</h:link>
+                                    </li>
+                                    <li>
+                                        <h:link outcome="nosotros">Nosotros</h:link>
+                                    </li>
+                                    <li>
+                                        <h:link outcome="login">Iniciar Sesion</h:link>
+                                    </li>                                      
+				</ul>
+			</div>
+                    </h:form>
+		</nav>
+	</header>
+
+	<!--Novedades-->
+	<section class="novedades">
+		<div class="novedades-title">
+			<h2>Productos</h2>
+			<hr/>
+		</div>
+
+		<div class="box-novedades">
+			<div class="card-novedad">
+				<div class="card-img">
+					<img src="../img/mechas.png" alt=""/>
+				</div>
+
+				<div class="novedad-text">
+					<h4>Keratina Marcel France</h4>
+					<p>Mejora visiblemente la textura, brillo, vitalidad y suavidad del cabello. Sus ingredientes activos actuan al nivel de la cúticula capilar obteniendo resultados sorprendentes</p>
+				</div>
+			</div>
+
+			<div class="card-novedad">
+				<div class="card-img">
+					<img src="../img/instantaneo.jpeg" alt=""/>
+				</div>
+				
+				<div class="novedad-text">
+					<h4>Kit Reparacion</h4>
+					<p>Recupera los daños causados por procesos químicos y por efecto de medios ambientes agresivos, creando una capa protectora en el cabello.</p>
+				</div>
+			</div>
+
+			<div class="card-novedad">
+				<div class="card-img">
+					<img src="../img/hombre.jpeg" alt=""/>
+				</div>
+				
+				<div class="novedad-text">
+					<h4>Shampo Energizante</h4>
+					<p>Enriquecido con cafeína natural que estimula el crecimiento del cabello y reduce la supresión de la viabilidad folicular inducida por la dihidrotestosterona. !</p>
+				</div>
+			</div>
+
+			<div class="card-novedad">
+				<div class="card-img">
+					<img src="../img/tratamiento (3).jpg" alt=""/>
+				</div>
+				
+				<div class="novedad-text">
+					<h4>Tratamiento Loreal</h4>
+					<p> Es perfecto para aquellos que sufren de los agentes externos, reparándolos y dejándolos más suaves, ligeros y brillantes.</p>
+				</div>
+			</div>
+
+			<div class="card-novedad">
+				<div class="card-img">
+					<img src="../img/gel.jpg" alt=""/>
+				</div>
+				
+				<div class="novedad-text">
+					<h4>Gel Irasant</h4>
+					<p>Gel moldeador de alto brillo. Permite
+                                            reducir el volumen en los cabellos crespos.
+                                            Control del peinado sin acartonamiento, con efecto húmedo no
+                                            graso. Sin Alcohol !</p>
+				</div>
+			</div>
+
+			<div class="card-novedad">
+				<div class="card-img">
+					<img src="../img/kit.jpeg" alt=""/>
+				</div>
+				
+				<div class="novedad-text">
+					<h4>Kit Anticaida</h4>
+					<p>Producto diseñado para brindar 10 beneficios en cada aplicación: hidratación, brillo, elasticidad, acción antioxidante, nutrición, preparación, protección color, protección térmica!</p>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+	<footer class="footer">
+            <div class="deg-footer"></div>
+            <div class="ejeZfooter">
+                    <div class="footer-content">
+                            <div class="footer-title">
+                                    <h2>Formulario de contacto</h2>
+                                    <hr/>
+                            </div>
+
+
+                            <div class="formulario-content">
+                                    <h:form id="formulario">
+                                            <label for="user">Nombre:</label>
+                                            <input type="text" id="user" name="user" placeholder="Ingresa tu nombre"/>
+
+                                            <label for="email">Correo Electronico:</label>
+                                            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electronico"/>
+
+                                            <label for="mensaje">Escribe tu mensaje:</label>
+                                            <textarea name="mensaje" id="mensaje"></textarea>
+
+                                            <div class="send"><button>Enviar</button></div>
+
+                                            <div class="mensaje-form">
+                                                    <p>Escribenos un mensaje, con gusto tendras una respuesta de parte de nosotros en muy poco tiempo.</p>
+                                            </div>
+                                    </h:form>
+                            </div>
+
+                            <div class="footer-text">
+                                    <p>&copy; Rennovate Look - 2020 | Todos los derechos reservados</p>
+                            </div>
+                    </div>
+            </div>
+        </footer>
+
+        <!--Scripts-->
+        <script src="https://kit.fontawesome.com/2e80612393.js" crossorigin="anonymous"></script>
+        <script src="../js/index.js"></script>
+    
+</h:body>
+
+</html>
