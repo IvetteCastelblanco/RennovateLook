@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import modelo.Proveedores;
 
 /**
@@ -27,8 +28,8 @@ import modelo.Proveedores;
  */
 public class ProveedoresJpaController implements Serializable {
 
-    public ProveedoresJpaController(EntityManagerFactory emf) {
-        this.emf = emf;
+    public ProveedoresJpaController() {
+        this.emf = Persistence.createEntityManagerFactory("RennovateLooksPU");
     }
     private EntityManagerFactory emf = null;
 

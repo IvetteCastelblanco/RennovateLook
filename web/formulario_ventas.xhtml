@@ -64,7 +64,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Otras Opciones:</h6>
                             <a class="collapse-item" href="formulario_ventas.xhtml">Registrar Ventas</a>
-                            <a class="collapse-item" href="tabla.xhtml">Ver Ventas</a>
+                            <a class="collapse-item" href="tablaVentas.xhtml">Ver Ventas</a>
                         </div>
                     </div>
                 </li>
@@ -79,7 +79,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Otras Opciones:</h6>
                             <a class="collapse-item" href="formulario_agenda.xhtml">Registrar Agendas</a>
-                            <a class="collapse-item" href="tabla.xhtml">Ver Agendas</a>
+                            <a class="collapse-item" href="tablaAgenda.xhtml">Ver Agendas</a>
                         </div>
                     </div>
                 </li>
@@ -94,22 +94,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Otras Opciones:</h6>
                             <a class="collapse-item" href="formulario_inventario.xhtml">Registrar Inventarios</a>
-                            <a class="collapse-item" href="tabla.xhtml">Ver Inventarios</a>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Menu de los Modulos -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>Cotizaciones</span>
-                    </a>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Otras Opciones:</h6>
-                            <a class="collapse-item" href="formulario_cotizaciones.xhtml">Registrar Cotizaciones</a>
-                            <a class="collapse-item" href="tabla.xhtml">Ver Cotizaciones</a>
+                            <a class="collapse-item" href="tablaInventario.xhtml">Ver Inventarios</a>
                         </div>
                     </div>
                 </li>
@@ -134,7 +119,6 @@
                             <a class="collapse-item" href="reportes_ventas.xhtml">Reporte Ventas</a>
                             <a class="collapse-item" href="reportes_ventas.xhtml">Reporte Agenda</a>
                             <a class="collapse-item" href="reportes_ventas.xhtml">Reporte Inventario</a>
-                            <a class="collapse-item" href="reportes_ventas.xhtml">Reporte Cotizaciones</a>
                         </div>
                     </div>
                 </li>
@@ -157,7 +141,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Otra Opcion:</h6>
                             <a class="collapse-item" href="formulario_crear_usuario.xhtml">Crear Usuario</a>
-                            <a class="collapse-item" href="html/tabla.xhtml">Ver Usuarios</a>
+                            <a class="collapse-item" href="tablaUsuarios.xhtml">Ver Usuarios</a>
                         </div>
                     </div>
                 </li>
@@ -367,6 +351,7 @@
                                 <p class="pb-0 mb-0">Te invitamos a contactarnos, te responderemos a la brevedad.</p>
                                 <p class="text-danger small pt-0 nt-0">*Todos los campos son obligatorios</p>
                                 <h:form class="form-container2" id="ventas" onsubmit="return validarforventas(event)">
+                                    <p:growl id="growlFormVentas" showDetail="true" sticky="true" />
                                     <div class="row form-group">
                                         <label for="marca" class="col-form-label col-md-4"><b>Codigo Producto: *</b></label>
                                         <div class="col-md-8">
@@ -404,13 +389,13 @@
                                         </div>
                                     </div>
                                     <div class="input-group date mt-2 pt-2" id="datetimepicker1">
-                                        <label for="nombre" class="col-form-label col-md-4"><b>Fecha Venta: *</b></label>
+                                        <label for="nombre" class="col-form-label col-md-4"><b>Fecha Venta Formato (dd/mm/aa): *</b></label>
+                                        <p:calendar value="#{VentaControlador.fecha}"/>
                                     </div>
                                     <br/>  
                                     <div class="form-group">
                                         <div class="col-xs-offset-3 col-xs-9">
                                             <p:commandButton value="Enviar"  action="#{VentaControlador.crearVenta()}" styleClass="ui-priority-primary" />
-                                            <input type="submit" class="btn btn-primary" value="Enviar" />
                                             <input type="reset" class="btn btn-default" value="Limpiar"/>
                                         </div>
                                     </div>

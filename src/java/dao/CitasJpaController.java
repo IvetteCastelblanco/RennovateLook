@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import modelo.Citas;
@@ -26,8 +27,8 @@ import modelo.Empleados;
  */
 public class CitasJpaController implements Serializable {
 
-    public CitasJpaController(EntityManagerFactory emf) {
-        this.emf = emf;
+    public CitasJpaController() {
+        this.emf = Persistence.createEntityManagerFactory("RennovateLooksPU");
     }
     private EntityManagerFactory emf = null;
 
@@ -251,5 +252,5 @@ public class CitasJpaController implements Serializable {
             em.close();
         }
     }
-    
+
 }

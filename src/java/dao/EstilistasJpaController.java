@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import modelo.Citas;
 import modelo.Estilistas;
 
@@ -28,8 +29,8 @@ import modelo.Estilistas;
  */
 public class EstilistasJpaController implements Serializable {
 
-    public EstilistasJpaController(EntityManagerFactory emf) {
-        this.emf = emf;
+    public EstilistasJpaController() {
+        this.emf = Persistence.createEntityManagerFactory("RennovateLooksPU");
     }
     private EntityManagerFactory emf = null;
 
