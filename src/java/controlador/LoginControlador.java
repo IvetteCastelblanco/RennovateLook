@@ -1,24 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package controlador;
 
 import dao.EmpleadosJpaController;
 import java.io.Serializable;
-import java.sql.ResultSet;
-import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import modelo.Empleados;
 
-@ManagedBean(name = "LoginControlador")
-@SessionScoped
+/**
+ *
+ * @author usuario
+ */
+@ManagedBean
+@RequestScoped
 public class LoginControlador implements Serializable {
-
-    ResultSet hol;
-
-    @EJB
+    
     EmpleadosJpaController empleadoDAO;
-
     private int idEmpleado;
     private String claveEmpleado;
     private String emailEmpleado;
@@ -102,5 +105,5 @@ public class LoginControlador implements Serializable {
     public void setTelefonoEmpleado(int telefonoEmpleado) {
         this.telefonoEmpleado = telefonoEmpleado;
     }
-
+    
 }

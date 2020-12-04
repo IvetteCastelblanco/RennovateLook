@@ -123,7 +123,7 @@ public class AgendaControlador implements Serializable {
             citaDAO = new CitasJpaController();
             citaDAO.destroy(c.getIdCita());
         } catch (NonexistentEntityException ex) {
-            Logger.getLogger(VentaControlador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AgendaControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -136,7 +136,7 @@ public class AgendaControlador implements Serializable {
             citaDAO = new CitasJpaController();
             citaDAO.edit(ci);
         } catch (Exception ex) {
-            Logger.getLogger(VentaControlador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AgendaControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

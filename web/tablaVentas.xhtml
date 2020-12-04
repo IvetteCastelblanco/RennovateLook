@@ -355,7 +355,7 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <h:form>
-                                        <p:dataTable var="venta" value="#{VentaControlador.listVentas}">
+                                        <p:dataTable var="venta" value="#{ventaControlador.listVentas}">
                                             <p:column headerText="Id">
                                                 <h:outputText value="#{venta.idVenta}" />
                                             </p:column>
@@ -381,8 +381,8 @@
                                             </p:column>
 
                                             <p:column headerText="Acciones">
-                                                <h:commandButton value="Eliminar" action="#{VentaControlador.borrarVenta(venta)}" />
-                                                <h:commandButton value="Guardar" action="#{VentaControlador.guardarVenta(venta)}" />
+                                                <h:commandButton value="Eliminar" action="#{ventaControlador.borrarVenta(venta)}" />
+                                                <h:commandButton value="Guardar" action="#{ventaControlador.guardarVenta(venta)}" />
                                                 <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#casasModal">
                                                     Editar
                                                 </button>
@@ -409,14 +409,14 @@
                                             <div class="form-group row">
                                                 <label for="inputColor" class="col-sm-2 col-form-label">Codigo de producto</label>
                                                 <div class="col-sm-10">
-                                                    <p:inputText value="#{VentaControlador.venta.idFkProducto.idProducto}" />
+                                                    <p:inputText value="#{ventaControlador.venta.idFkProducto.idProducto}" />
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="inputTamanio" class="col-sm-2 col-form-label">Cantidad de producto</label>
                                                 <div class="col-sm-10">
-                                                    <p:inputText value="#{VentaControlador.venta.cantidadVenta}" />
+                                                    <p:inputText value="#{ventaControlador.venta.cantidadVenta}" />
                                                 </div>
                                             </div>
 
@@ -424,14 +424,14 @@
                                             <div class="form-group row">
                                                 <label for="inputMaterial" class="col-sm-2 col-form-label">Identificacion del cliente</label>
                                                 <div class="col-sm-10">
-                                                    <p:inputText value="#{VentaControlador.venta.idFkCliente.idCliente}" />
+                                                    <p:inputText value="#{ventaControlador.venta.idFkCliente.idCliente}" />
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="inputMaterial" class="col-sm-2 col-form-label">Valor total</label>
                                                 <div class="col-sm-10">
-                                                    <p:inputText value="#{VentaControlador.venta.valorTotalVenta}" />
+                                                    <p:inputText value="#{ventaControlador.venta.valorTotalVenta}" />
                                                 </div>
                                             </div>
 
@@ -440,7 +440,7 @@
                                                 <div class="col-sm-10">
                                                     <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
                                                         <p:outputLabel for="console" value="Console:" />
-                                                        <p:selectOneRadio id="console" value="#{VentaControlador.venta.formaDePagoVenta}">
+                                                        <p:selectOneRadio id="console" value="#{ventaControlador.venta.formaDePagoVenta}">
                                                             <f:selectItem itemLabel="Efectivo" itemValue="Efectivo" />
                                                             <f:selectItem itemLabel="Tarjeta" itemValue="Tarjeta" />
                                                         </p:selectOneRadio>
@@ -451,7 +451,7 @@
                                             <div class="form-group row">
                                                 <label for="inputMaterial" class="col-sm-2 col-form-label">Fecha de venta</label>
                                                 <div class="col-sm-10">
-                                                    <p:calendar value="#{VentaControlador.venta.fechaVenta}"/>
+                                                    <p:calendar value="#{ventaControlador.venta.fechaVenta}"/>
                                                 </div>
                                             </div>
 
@@ -459,7 +459,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                            <h:commandButton    action="#{VentaControlador.editarVenta()}" class="btn btn-primary" value="Editar"  />
+                                            <h:commandButton    action="#{ventaControlador.editarVenta()}" class="btn btn-primary" value="Editar"  />
                                         </div>
                                     </h:form>
                                 </div>

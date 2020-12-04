@@ -56,9 +56,9 @@
                         <h2>Iniciar sesión</h2>
                         <h:form id="formLogin">                            
                             <p:growl id="growlFormLogin" showDetail="true" sticky="true" />
-                            <p:inputText id="username" value="#{LoginControlador.idEmpleado}"  required="true"></p:inputText>
-                            <p:password id="password" value="#{LoginControlador.claveEmpleado}" required="true" feedback="false"></p:password>
-                            <p:commandButton action="#{LoginControlador.validarEmpleado()}" value="Ingresar" update="formLogin" ajax="true"></p:commandButton>                            
+                            <p:inputText id="username" value="#{loginControlador.idEmpleado}"  required="true"></p:inputText>
+                            <p:password id="password" value="#{loginControlador.claveEmpleado}" required="true" feedback="false"></p:password>
+                            <p:commandButton action="#{loginControlador.validarEmpleado()}" value="Ingresar" update="formLogin" ajax="true"></p:commandButton>                            
                         </h:form>
                     </div>
 
@@ -67,12 +67,12 @@
                      
                             <h:form id="formRegistrarEmpleado">             
                                 <p:growl id="growlFormRegistrarEmpleado" showDetail="true" sticky="true" />
-                                <p:inputText id="txtIdUsuario" value="#{LoginControlador.idEmpleado}" required="true" ></p:inputText>
-                                <p:password id="txtClaveUsuario" value="#{LoginControlador.claveEmpleado}"  feedback="false"></p:password>
-                                <p:inputText id="txtEmailUsuario" value="#{LoginControlador.emailEmpleado}" ></p:inputText>
-                                <p:inputText id="txtTelefonoUsuario" value="#{LoginControlador.telefonoEmpleado}" ></p:inputText>
+                                <p:inputText id="txtIdUsuario" value="#{loginControlador.idEmpleado}" required="true" ></p:inputText>
+                                <p:password id="txtClaveUsuario" value="#{loginControlador.claveEmpleado}"  feedback="false"></p:password>
+                                <p:inputText id="txtEmailUsuario" value="#{loginControlador.emailEmpleado}" ></p:inputText>
+                                <p:inputText id="txtTelefonoUsuario" value="#{loginControlador.telefonoEmpleado}" ></p:inputText>
 
-                                <p:commandButton action="#{LoginControlador.crearEmpleado()}" value="Registrar" update="formRegistrarEmpleado" ajax="true"></p:commandButton>
+                                <p:commandButton action="#{loginControlador.crearEmpleado()}" value="Registrar" update="formRegistrarEmpleado" ajax="true"></p:commandButton>
                             </h:form>
      
                     </div>
@@ -88,3 +88,4 @@
 
     </h:body>
 </html>
+

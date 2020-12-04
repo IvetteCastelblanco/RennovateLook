@@ -355,25 +355,25 @@
                                     <div class="row form-group">
                                         <label for="marca" class="col-form-label col-md-4"><b>Codigo Producto: *</b></label>
                                         <div class="col-md-8">
-                                            <p:inputText value="#{VentaControlador.codigo}" />
+                                            <p:inputText value="#{ventaControlador.codigo}" />
                                         </div>
                                     </div>
                                     <div class="row form-group">
                                         <label for="nombre" class="col-form-label col-md-4"><b>Cantidad Producto: *</b></label>
                                         <div class="col-md-8">
-                                            <p:inputText value="#{VentaControlador.cantidad}" />
+                                            <p:inputText value="#{ventaControlador.cantidad}" />
                                         </div>
                                     </div>
                                     <div class="row form-group">
                                         <label for="nombre" class="col-form-label col-md-4"><b>Identificacion del cliente: *</b></label>
                                         <div class="col-md-8">
-                                            <p:inputText value="#{VentaControlador.idCliente}" />
+                                            <p:inputText value="#{ventaControlador.idCliente}" />
                                         </div>
                                     </div>
                                     <div class="row form-group">
                                         <label for="nombre" class="col-form-label col-md-4"><b>Valor Total: *</b></label>
                                         <div class="col-md-8">
-                                            <p:inputText value="#{VentaControlador.valorTotal}" />
+                                            <p:inputText value="#{ventaControlador.valorTotal}" />
                                         </div>
                                     </div>
                                     <div class="row form-group">
@@ -381,7 +381,7 @@
                                         <div class="col-md-8">
                                             <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
                                                 <p:outputLabel for="console" value="Console:" />
-                                                <p:selectOneRadio id="console" value="#{VentaControlador.forma}">
+                                                <p:selectOneRadio id="console" value="#{ventaControlador.forma}">
                                                     <f:selectItem itemLabel="Efectivo" itemValue="Efectivo" />
                                                     <f:selectItem itemLabel="Tarjeta" itemValue="Tarjeta" />
                                                 </p:selectOneRadio>
@@ -390,12 +390,12 @@
                                     </div>
                                     <div class="input-group date mt-2 pt-2" id="datetimepicker1">
                                         <label for="nombre" class="col-form-label col-md-4"><b>Fecha Venta Formato (dd/mm/aa): *</b></label>
-                                        <p:calendar value="#{VentaControlador.fecha}"/>
+                                        <p:calendar value="#{ventaControlador.fecha}"/>
                                     </div>
                                     <br/>  
                                     <div class="form-group">
                                         <div class="col-xs-offset-3 col-xs-9">
-                                            <p:commandButton value="Enviar"  action="#{VentaControlador.crearVenta()}" styleClass="ui-priority-primary" />
+                                            <p:commandButton value="Enviar"  action="#{ventaControlador.crearVenta()}" styleClass="ui-priority-primary" />
                                             <input type="reset" class="btn btn-default" value="Limpiar"/>
                                         </div>
                                     </div>

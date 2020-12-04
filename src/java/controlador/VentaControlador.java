@@ -11,23 +11,19 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
-import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import modelo.Clientes;
 import modelo.Empleados;
 import modelo.Productos;
 import modelo.Ventas;
 
-@ManagedBean(name = "VentaControlador")
-@SessionScoped
+@ManagedBean
+@ViewScoped
 public class VentaControlador implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
-    @EJB
     VentasJpaController ventaDAO;
     Ventas venta;
     int Codigo;
@@ -171,5 +167,5 @@ public class VentaControlador implements Serializable {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-
+    
 }

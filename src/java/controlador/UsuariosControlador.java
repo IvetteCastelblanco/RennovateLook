@@ -1,9 +1,9 @@
 package controlador;
 
 import dao.EmpleadosJpaController;
-import dao.ProductosJpaController;
 import dao.exceptions.IllegalOrphanException;
 import dao.exceptions.NonexistentEntityException;
+import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,12 +13,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import modelo.Empleados;
-import modelo.Productos;
-import modelo.Proveedores;
 
 @ManagedBean
 @RequestScoped
-public class UsuariosControlador {
+public class UsuariosControlador implements Serializable{
 
     Empleados emp = new Empleados();
     EmpleadosJpaController empleadoDAO;
@@ -70,7 +68,7 @@ public class UsuariosControlador {
             empleadoDAO = new EmpleadosJpaController();
             empleadoDAO.edit(emp);
         } catch (Exception ex) {
-            Logger.getLogger(VentaControlador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuariosControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

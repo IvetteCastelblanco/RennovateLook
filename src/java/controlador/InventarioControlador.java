@@ -4,6 +4,7 @@ import dao.ProductosJpaController;
 import dao.ProveedoresJpaController;
 import dao.exceptions.IllegalOrphanException;
 import dao.exceptions.NonexistentEntityException;
+import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,7 +18,7 @@ import modelo.Proveedores;
 
 @ManagedBean
 @ViewScoped
-public class InventarioControlador {
+public class InventarioControlador implements Serializable {
 
     String Proveedores;
     Productos pro = new Productos();
@@ -85,7 +86,7 @@ public class InventarioControlador {
             productoDAO = new ProductosJpaController();
             productoDAO.edit(pro);
         } catch (Exception ex) {
-            Logger.getLogger(VentaControlador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(InventarioControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
